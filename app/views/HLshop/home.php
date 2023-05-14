@@ -1,12 +1,29 @@
  
       <div class="container">
+    
+
+
+
         <div class="title-section mb-5">
-          <h2 class="text-uppercase"><span class="d-block">Discover</span> The Collections</h2>
+          <h2 class="text-uppercase"><span class="d-block">Category</span></h2>
         </div>
+        
+<!-- <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-border-width" viewBox="0 0 16 16">
+  <path d="M0 3.5A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-2zm0 5A.5.5 0 0 1 .5 8h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1zm0 4a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+</svg></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div> -->
+
         <div class="row align-items-stretch">
         <?php 
                     foreach ($category as $key => $cate){      
                     ?>    
+                    
           <div class="col-lg-2">
             
             <a class="product_category" href="<?php echo BASE_URL ?>/sanpham/danhmuc/<?php echo $cate['category_product_id'] ?> "><?php echo $cate['category_product_title'] ?></a>
