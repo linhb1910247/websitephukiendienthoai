@@ -42,9 +42,9 @@
             <div class="block-5 mb-5">
               <h3 class="footer-heading mb-4" style="margin-left: 28px;">Contact Info</h3>
               <ul class="list-unstyled">
-                <li><h5>58 To Huu - Thanh Xuan - Ha Noi</h5></li>
+                <li><h5>Nguyen Van Linh, Hung Loi, Ninh Kieu, Can Tho</h5></li>
                 <li><h5>092456789</h5></li>
-                <li><h5>Khiem@gmail.com</h5></li>
+                <li><h5>emai@gmail.com</h5></li>
               </ul>
             </div>
           </div>
@@ -61,29 +61,6 @@
   <script src="<?php echo BASE_URL ?>/public/js/owl.carousel.min.js"></script>
   <script src="<?php echo BASE_URL ?>/public/js/jquery.magnific-popup.min.js"></script>
   <script src="<?php echo BASE_URL ?>/public/js/aos.js"></script>
- <script src="<?php echo BASE_URL ?>/public/js/main.js"></script>
- <!-- dropdown -->
- <script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
 <!-- Messenger Plugin chat Code -->
 <div id="fb-root"></div>
 
@@ -93,10 +70,9 @@ window.onclick = function(event) {
 
 <script>
   var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "115707164838865");
+  chatbox.setAttribute("page_id", "100326146376920");
   chatbox.setAttribute("attribution", "biz_inbox");
 </script>
-
 
 <!-- Your SDK code -->
 <script>
@@ -111,8 +87,39 @@ window.onclick = function(event) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
-</script>  </body>
+</script>
+  <script src="<?php echo BASE_URL ?>/public/js/main.js"></script>
+  <script>
+$(function() {
+
+$('.replybutton').on('click', function() {
+$('.replybox').hide();
+var commentboxId= $(this).attr('data-commentbox');
+$('#'+commentboxId).toggle();
+});
+
+$('.cancelbutton').on('click', function() {
+$('.replybox').hide();
+});
+
+});
+$(function() {
+
+$('.replybutton1').on('click', function() {
+$('.replybox1').hide();
+var commentboxId= $(this).attr('data-commentbox1');
+$('#'+commentboxId).toggle();
+});
+
+$('.cancelbutton1').on('click', function() {
+$('.replybox1').hide();
+});
+
+});
+</script> 
+
+  </body>
 </html>
